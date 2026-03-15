@@ -11,6 +11,7 @@ function Header() {
           Học React - Khám phá cách xây dựng ứng dụng linh hoạt, hiện đại, và
           đầy sáng tạo năm 2026!
         </p>
+        <p>Chúc các bạn thành công !</p>
       </header>
     </>
   );
