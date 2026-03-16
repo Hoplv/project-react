@@ -1,12 +1,11 @@
-import {useState} from "react";
+import { useState } from "react";
 import MainContent from "./components/MainContent/MainContent.jsx";
 import Header from "./components/Header/Header.jsx";
-import {myData} from "../data.js";
+import { myData, EXAMPLES } from "../data.js";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState("Vui lòng click vào nút");
-  console.log("App được gọi");
+  const [selectedTopic, setSelectedTopic] = useState("components");
 
   function handleSelect(selectedButton) {
     setSelectedTopic(selectedButton);
@@ -18,10 +17,14 @@ function App() {
         <section id="core-concepts">
           <h2>Khái niệm chính trong React</h2>
           <ul>
-            <MainContent {...myData[0]} />
-            <MainContent {...myData[1]} />
-            <MainContent {...myData[2]} />
-            <MainContent {...myData[3]} />
+            {myData.map((items) => (
+              <MainContent
+                key={items.id}
+                title={items.title}
+                image={items.image}
+                desc={items.desc}
+              ></MainContent>
+            ))}
           </ul>
         </section>
 
@@ -29,12 +32,18 @@ function App() {
           <h2>Examples</h2>
           {/* prettier-ignore */}
           <menu>
-            <TabButton onSelect={()=>{handleSelect('components')}}>Components</TabButton>
-            <TabButton onSelect={()=>{handleSelect('jsx')}}>JSX</TabButton>
-            <TabButton onSelect={()=>{handleSelect('props')}}>Props</TabButton>
-            <TabButton onSelect={()=>{handleSelect('state')}}>State</TabButton>
+            <TabButton onSelect={() => handleSelect("components")} label="Components" />
+            <TabButton onSelect={() => handleSelect("jsx")} label="JSX" />
+            <TabButton onSelect={() => handleSelect("props")} label="Props" />
+            <TabButton onSelect={() => handleSelect("state")} label="State" />
           </menu>
-          {selectedTopic}
+          <div id="tab-content">
+            <h2>{EXAMPLES[selectedTopic].title}</h2>
+            <p>{EXAMPLES[selectedTopic].desc}</p>
+            <pre>
+              <code>{EXAMPLES[selectedTopic].code}</code>
+            </pre>
+          </div>
         </section>
       </main>
     </>
