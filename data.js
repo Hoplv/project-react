@@ -5,21 +5,25 @@ import pic4 from "./src/assets/pic4.png";
 
 export const myData = [
   {
+    id: 1,
     image: pic1,
     title: "Components",
     desc: "Khối xây dựng giao diện cơ bản - kết hợp nhiều thành phần để tạo nên ứng dụng.",
   },
   {
+    id: 2,
     image: pic2,
     title: "JSX",
     desc: "Kết hợp HTML và JavaScript để tạo giao diện động và mạnh mẽ.",
   },
   {
+    id: 3,
     image: pic3,
     title: "Props",
     desc: "Truyền dữ liệu vào thành phần để làm nó linh hoạt và tái sử dụng.",
   },
   {
+    id: 4,
     image: pic4,
     title: "State",
     desc: "Dữ liệu được React quản lý, khi thay đổi sẽ tự động làm mới giao diện.",
@@ -28,8 +32,8 @@ export const myData = [
 
 export const EXAMPLES = {
   components: {
-    title: 'Components',
-    desc: 'Thành phần là các khối giao diện tái sử dụng trong React. Chúng được thiết kế để độc lập và có thể kết hợp linh hoạt.',
+    title: "Components",
+    desc: "Thành phần là các khối giao diện tái sử dụng trong React. Chúng được thiết kế để độc lập và có thể kết hợp linh hoạt.",
     code: `
 function LoiChao() {
   return (
@@ -42,8 +46,8 @@ function LoiChao() {
     `,
   },
   jsx: {
-    title: 'JSX',
-    desc: 'JSX cho phép viết mã giao diện dễ đọc hơn bằng cách sử dụng cú pháp HTML-like. Nó giúp việc xây dựng UI nhanh chóng và hiệu quả.',
+    title: "JSX",
+    desc: "JSX cho phép viết mã giao diện dễ đọc hơn bằng cách sử dụng cú pháp HTML-like. Nó giúp việc xây dựng UI nhanh chóng và hiệu quả.",
     code: `
     function GioiThieu() {
       return (
@@ -56,8 +60,8 @@ function LoiChao() {
     `,
   },
   props: {
-    title: 'Props',
-    desc: 'Props là cách truyền dữ liệu giữa các thành phần trong React. Chúng làm cho giao diện có thể tùy chỉnh và linh hoạt.',
+    title: "Props",
+    desc: "Props là cách truyền dữ liệu giữa các thành phần trong React. Chúng làm cho giao diện có thể tùy chỉnh và linh hoạt.",
     code: `
     function HoSo({ ten, tuoi }) {
       return (
@@ -71,8 +75,8 @@ function LoiChao() {
     `,
   },
   state: {
-    title: 'State',
-    desc: 'State cho phép các thành phần quản lý trạng thái động. Nó giúp giao diện phản hồi linh hoạt với các thay đổi.',
+    title: "State",
+    desc: "State cho phép các thành phần quản lý trạng thái động. Nó giúp giao diện phản hồi linh hoạt với các thay đổi.",
     code: `
     function CongTac() {
       const [bat, setBat] = React.useState(false);
@@ -90,4 +94,3 @@ function LoiChao() {
     `,
   },
 };
-
