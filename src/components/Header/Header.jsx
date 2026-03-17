@@ -9,7 +9,7 @@ function Header() {
         <h1>React Tuhoc.cc</h1>
         <p>
           Học React - Khám phá cách xây dựng ứng dụng linh hoạt, hiện đại, và
-          đầy sáng tạo năm 2000!
+          đầy sáng tạo năm 9999!
         </p>
         <p>Chúc các bạn thành công!</p>
       </header>
